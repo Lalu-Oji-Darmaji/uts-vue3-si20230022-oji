@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
+  base: '/uts-vue3-si20230022-oji/',
   plugins: [
     vue(),
     vueDevTools(),
