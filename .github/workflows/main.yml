@@ -4,9 +4,10 @@ on:
   push:
     branches: [ main ] 
 
-# Tambahkan bagian ini agar Action punya izin untuk menulis ke repositori
 permissions:
   contents: write
+  pages: write      # Tambahkan ini
+  id-token: write   # Tambahkan ini
 
 jobs:
   build-and-deploy:
@@ -23,5 +24,4 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages # Branch tujuan deploy
           folder: dist    # Folder hasil build Vite
